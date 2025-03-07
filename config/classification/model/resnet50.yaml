@@ -1,0 +1,7 @@
+_target_: classification.models.resnet.ResNet_Model
+model_name: "resnet50"
+n_output_layers: 2
+output_layers_shapes:
+  6: "erosion"
+  5: "jsn"
+pretrained: True

@@ -1,0 +1,21 @@
+# Model configuration
+defaults:
+  - model: "resnet50"
+  - optimizer: adamw
+  - train_dataset: base_ds
+  - val_dataset: base_ds
+  - scheduler: step_lr
+
+# Training configuration
+training:
+  normalized_jsn_class_weights: [0.363, 0.624, 0.272, 0.575, 3.827]
+  normalized_erosion_class_weights: [0.012, 0.183, 0.391, 2.571, 7.714, 1.058]
+  num_workers: 0
+  epochs: 20
+  batch_size: 64
+  save_dir: "checkpoints/classification"
+
+# WandB configuration
+wandb:
+  api_key: "a600fc9d883a23d88f5deb2a8c314881a8da5de9"
+  project: "joint_erosion_jsn_classification"

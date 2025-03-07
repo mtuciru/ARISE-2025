@@ -1,0 +1,4 @@
+path: data/yolo_dataset  # Path to dataset root
+train: images/train  # Training images directory
+val: images/val  # Validation images directory
+nc: 1  # Number of classes

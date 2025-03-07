@@ -1,0 +1,16 @@
+defaults:
+  - model: yolo12
+  - dataset: yolo_dataset
+
+train:
+  dataset_cfg: config/detection/dataset/yolo_dataset.yaml
+  epochs: 600  # Number of training epochs
+  batch: 32  # Batch size
+  imgsz: 640  # Image size
+  device: 0  # Use GPU (0 for first GPU, "cpu" for CPU)
+  workers: 0  # Number of data loading workers
+  patience: 50  # Early stopping patience
+  save: True  # Save checkpoints
+  save_period: -1  # Save checkpoint every N epochs
+  cache: False  # Cache images in RAM/disk for faster training
+  name: yolov12_custom  # Experiment name

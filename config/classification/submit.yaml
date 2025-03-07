@@ -1,0 +1,10 @@
+defaults:
+  - model: resnet50
+
+inference:
+  batch_size: 32
+  model_weights: checkpoints/classification/model_epoch:3_jsn_accuracy:0.6170373104655409_erosion_accuracy:0.41256780256780257.pth
+  bbox_csv: data/eval_detection_output/bbox_txts/all_bboxes.txt
+  image_dir: data/eval_cropped_images
+  output_csv: submit.csv
+  device: "cuda:0"
