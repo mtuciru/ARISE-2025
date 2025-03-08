@@ -19,9 +19,7 @@ The performance of the models will be evaluated using the following metrics:
 ### 1. \textbf{Intersection over Union (IoU)}
 IoU measures the overlap between the predicted bounding box and the ground truth bounding box. It is defined as:
 
-\[
-\text{IoU} = \frac{\text{Area of Overlap}}{\text{Area of Union}}
-\]
+$\text{IoU} = \frac{\text{Area of Overlap}}{\text{Area of Union}}$
 
 - \textbf{Area of Overlap}: The region where the predicted and ground truth bounding boxes intersect.
 - \textbf{Area of Union}: The total area covered by both the predicted and ground truth bounding boxes.
@@ -35,18 +33,14 @@ Balanced Accuracy is a metric used to evaluate the performance of a classificati
 
 Balanced Accuracy is defined as:
 
-\[
-\text{Balanced Accuracy} = \frac{1}{2} \left( \frac{\text{True Positives (TP)}}{\text{True Positives (TP)} + \text{False Negatives (FN)}} + \frac{\text{True Negatives (TN)}}{\text{True Negatives (TN)} + \text{False Positives (FP)}} \right)
-\]
+$\text{Balanced Accuracy} = \frac{1}{2} \left( \frac{\text{True Positives (TP)}}{\text{True Positives (TP)} + \text{False Negatives (FN)}} + \frac{\text{True Negatives (TN)}}{\text{True Negatives (TN)} + \text{False Positives (FP)}} \right)$
 
 ---
 
 ### 3. \textbf{Final Metric: IoU × Accuracy}
 The final evaluation metric is the product of \textbf{IoU} and \textbf{Accuracy}. This combined metric ensures that models achieve both precise localization and accurate pathology assessment. It is defined as:
 
-\[
-\text{Final Metric} = \text{IoU} \times \text{Accuracy}
-\]
+$\text{Final Metric} = \text{IoU} \times \text{Accuracy}$
 
 The final score ranges between 0 and 1, where higher values indicate better overall performance.
 
