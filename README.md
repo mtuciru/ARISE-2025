@@ -94,7 +94,7 @@ The winning solutions will be those that achieve the highest performance on the 
 
 - The `ID` column should follow the format: `{patient_id}_{joint_index}` (e.g., `1_14` for the 14th joint of patient 1.
 - __You are not required to follow a specific numbering scheme for joint IDs__. However, each patient must have exactly 100 unique IDs in the submission file to meet Kaggle's processing requirements. Matching joints to ground truth will be handled automatically using Intersection over Union (IoU).
-- **bounding box coordinates (xcenter, ycenter, dx, dy) must be normalized to the image dimensions, meaning all values must be between 0 and 1.
+- __Bounding box coordinates (xcenter, ycenter, dx, dy) must be normalized to the image dimensions, meaning all values must be between 0 and 1__.
 ---
 
 # Baseline Solution
