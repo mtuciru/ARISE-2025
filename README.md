@@ -1,4 +1,4 @@
-# Computer Vision Hackathon: Automated Joint Assessment in Rheumatoid Arthritis
+# ARISE-2025: Automated Rheumatoid Inflammatory Scoring and Evaluation
 
 ## Task Description
 
