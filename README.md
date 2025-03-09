@@ -188,6 +188,10 @@ python submit.py
 ## Submission File Requirements
 
 - Ensure the `submit.csv` file adheres to the specified format.
-- Normalize bounding box coordinates to the image dimensions.
+- Normalize bounding box coordinates (`xcenter`, `ycenter`, `dx`, `dy`) to the image dimensions, meaning all values must be between **0 and 1**.
 - Include exactly 100 rows per image, padding with empty rows if necessary.
 - Use the `PAD` column to indicate padding rows (`1` for padding, `0` for predicted rows).
+- **ID System**:
+  - Each patient must have exactly 100 unique IDs in the format `{patient_id}_{joint_index}` (e.g., `1_14` for the 14th joint of patient 1).
+  - You are not required to follow a specific numbering scheme for joint IDs, but the IDs must be unique for each patient.
+  - Matching joints to ground truth will be handled automatically using Intersection over Union (IoU).
