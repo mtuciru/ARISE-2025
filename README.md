@@ -80,7 +80,7 @@ The winning solutions will be those that achieve the highest performance on the 
 - Each image must have exactly **100 rows** in the `submit.csv` file. If there are fewer than 100 joints for a patient, pad the remaining rows with empty values.
 - Padding rows should have the following format:
   - `PAD` column set to `1`.
-  - All other columns (`joint_id`, `xcenter`, `ycenter`, `dx`, `dy`, `jsn_score`, `erosion_score`) set to `none`.
+  - All other columns (`joint_id`, `xcenter`, `ycenter`, `dx`, `dy`, `jsn_score`, `erosion_score`) set to `none` (str 'none', not empty value!).
 
 #### Example of Padding Rows:
 | ID      | patient_id | joint_id | xcenter | ycenter | dx   | dy   | jsn_score | erosion_score | PAD |
