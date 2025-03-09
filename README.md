@@ -99,9 +99,19 @@ The winning solutions will be those that achieve the highest performance on the 
 
 # Baseline Solution
 
-As a baseline, we present a pipeline combining **YOLOv12s** for joint localization and **ResNet50** for pathology assessment.
+### Troubleshooting Import Issues
+
+If you encounter import problems, ensure that the project directory is added to your `PYTHONPATH`. Run the following command in your terminal:
+
+```bash
+export PYTHONPATH=$PYTHONPATH:/path/to/arise-2025
+```
+Replace /path/to/arise-2025 with the absolute path to the root directory of the project. This ensures that Python can locate and import the necessary modules.
+
 
 ## Training
+
+As a baseline, we present a pipeline combining **YOLOv12s** for joint localization and **ResNet50** for pathology assessment.
 
 ### Preprocessing for Detection Model
 
