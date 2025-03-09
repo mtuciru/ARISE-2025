@@ -58,6 +58,38 @@ Participants will work with a clinical collection of radiographic images annotat
 - **Images**: High-resolution radiographic images of hand joints.
 - **Annotations**: Bounding boxes for joint localization and severity scores for erosion and JSN.
 
+
+## Data Description
+
+### `scores.csv`
+
+- **Description**: This file contains expert scores for joint pathology assessment.
+- **Columns**:
+  - **Unnamed Column (Index 0)**: Represents the `joint_id`. This column is not named in the file but serves as the joint identifier.
+  - **patient_id**: Unique identifier for the patient.
+  - **hand**: Specifies the hand (e.g., `left` or `right`).
+  - **joint**: Specifies the joint type (e.g., `DIP`, `PIP`, `MCP`, etc.).
+  - **disease**: Specifies type of disease (JSN/erosion)
+  - **score**: Disease score. (For JSN 0-4 and for erosion 0-5)
+  - **expert_id**: Expert ID who scored this joint.
+- **Key Notes**:
+  - For each joint, there are **3 rows** corresponding to predictions from **3 different experts**.
+  - To create ground truth scores, **average the scores** from the 3 experts for each joint.
+  - If a score is missing (e.g., `NaN`), it means the expert did not provide a score for that joint. These rows can be **dropped** during preprocessing.
+
+### `bboxes.csv`
+
+- **Description**: This file contains bounding box coordinates for joint localization.
+- **Columns**:
+  - **Unnamed Column (Index 0)**: This column does not represent `joint_id`. It is simply a placeholder and should be redefined.
+  - **xcenter**: X-coordinate of the bounding box center.
+  - **ycenter**: Y-coordinate of the bounding box center.
+  - **dx**: Width of the bounding box.
+  - **dy**: Height of the bounding box.
+- **Key Notes**:
+  - The bounding box coordinates are **not normalized** and should be normalized to the image dimensions (values between 0 and 1).
+  - The rows are already sorted in the required order. You need to **recursively number** each row from `0` to `41` to create the `joint_id` column.
+
 ---
 
 ## Expected Outcomes
